@@ -1,0 +1,8 @@
+<!-- res/values/arrays.xml -->
+<resources>
+    <string-array name="time_array">
+        <item>18h 30th5</item>
+        <item>20h 31th5</item>
+        <item>16h 1th6</item>
+    </string-array>
+</resources>

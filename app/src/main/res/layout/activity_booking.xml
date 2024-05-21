@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.BookingActivity"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="#130f40">
+
+    <!-- Họ và tên -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/backImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back"
+            android:layout_marginLeft="16dp"
+            app:layout_constraintLeft_toLeftOf="@id/constraintLayout3"
+            app:layout_constraintTop_toTopOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        android:text="Ticket Booking"
+        android:textColor="#fff"
+        app:layout_constraintTop_toBottomOf="@id/constraintLayout3"/>
+
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Họ và tên"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <EditText
+        android:id="@+id/editFullName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Nhập họ và tên"
+        android:textColor="#ffffff"
+        android:textColorHint="#aaaaaa"
+        android:backgroundTint="#ffffff"
+        app:layout_constraintTop_toBottomOf="@id/textViewName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <!-- Tiêu đề thời gian -->
+    <TextView
+        android:id="@+id/textViewTimeTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Chọn thời gian"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/editFullName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <!-- Chọn thời gian -->
+    <Spinner
+        android:id="@+id/spinnerTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/textViewTimeTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" >
+    </Spinner>
+
+    <!-- Tiêu đề chỗ ngồi -->
+    <TextView
+        android:id="@+id/textViewSeatTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Chọn chỗ ngồi"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/spinnerTime"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <!-- Chọn chỗ ngồi -->
+    <GridLayout
+        android:id="@+id/gridLayoutSeats"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:columnCount="5"
+    android:rowCount="2"
+    app:layout_constraintTop_toBottomOf="@id/textViewSeatTitle"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp">
+    </GridLayout>
+
+    <!-- Nút hoàn tất -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ticketPriceLayout"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintTop_toBottomOf="@id/gridLayoutSeats">
+
+        <TextView
+            android:id="@+id/ticketPriceTitle"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Ticket Price"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:layout_marginLeft="16dp"
+            app:layout_constraintLeft_toLeftOf="@id/ticketPriceLayout"
+            app:layout_constraintTop_toTopOf="@+id/ticketPriceLayout" />
+
+        <TextView
+            android:id="@+id/ticketPriceValue"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:text="test"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintStart_toStartOf="@+id/ticketPriceTitle"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/buttonComplete"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Hoàn tất"
+        android:layout_marginTop="50dp"
+        android:textColor="#ffffff"
+        android:backgroundTint="#27ae60"
+        app:layout_constraintTop_toBottomOf="@id/ticketPriceLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

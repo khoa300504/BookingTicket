@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Phần 1: Dấu X và Giá Ghế -->
+    <LinearLayout
+        android:id="@+id/section_exit_and_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical">
+
+        <!-- Dấu X để thoát khỏi trang đặt ghế -->
+        <ImageView
+            android:id="@+id/imageViewExit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+<!--            android:src="@drawable/ic_close"-->
+<!--            android:contentDescription="@string/close_icon_description" -->
+
+
+        <!-- Giá Ghế -->
+        <TextView
+            android:id="@+id/textViewSeatPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Giá ghế: $20"
+            android:textSize="18sp"
+            android:layout_marginStart="16dp"
+            android:textColor="@android:color/black"/>
+
+    </LinearLayout>
+
+    <!-- Phần 2: Layout cho 80 ghế ngồi -->
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/section_exit_and_price"
+        android:layout_above="@id/section_note"
+        android:rowCount="8"
+        android:columnCount="10"
+        android:padding="8dp"/>
+
+    <!-- Phần 3: Lưu ý -->
+    <LinearLayout
+        android:id="@+id/section_note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@android:color/darker_gray">
+
+        <!-- Tiêu đề Lưu ý -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lưu ý"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Nội dung Lưu ý -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1. Vui lòng giữ gìn sạch sẽ.\n2. Xin vui lòng không hút thuốc trong phòng chiếu."
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
+
+</RelativeLayout>
